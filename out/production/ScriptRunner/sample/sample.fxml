@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="700.0">
+         <children>
+            <TextArea fx:id="textArea" prefHeight="300.0" prefWidth="700.0" wrapText="true" />
+            <ScrollPane prefHeight="300.0" prefWidth="700.0">
+               <content>
+                  <VBox fx:id="output" prefHeight="300.0" prefWidth="700.0" />
+               </content>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <VBox fx:id="controlPanel" prefHeight="600.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="run" mnemonicParsing="false" onAction="#runCode">
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Ellipse fx:id="isRunning" fill="WHITE" radiusX="20.0" radiusY="20.0" stroke="BLACK" strokeType="INSIDE">
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </Ellipse>
+            <Label fx:id="exitCode" text="Exit Code: " textFill="#d51212" wrapText="true">
+               <VBox.margin>
+                  <Insets left="5.0" top="300.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>
